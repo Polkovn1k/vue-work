@@ -151,8 +151,6 @@ const dialog = ref(null)
 
 onMounted(() => {
     // Фокусируемся на диалоговом окне, чтобы сработала клавиша Esc без дополнительного клика на окне
-    console.log(dialog);
-    console.log(dialog.value);
     dialog.value.focus()
 })
 
