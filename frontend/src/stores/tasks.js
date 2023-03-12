@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import tasks from '../mocks/tasks.json'
-import { normalizeTask } from '../common/helpers'
+import { normalizeTask } from '@/common/helpers'
 import { useFiltersStore } from './filters'
 import { useUsersStore } from '@/stores/users'
 
@@ -42,6 +42,8 @@ export const useTasksStore = defineStore('tasks', {
                 }
                 return Object.entries(result)
                     .every(([key, callback]) =>
+                    //!filtersStore.filters[key].length - true если нет фильтра в filter.js. В таком случае эта task будет в итоговом результате
+                    //Если !filtersStore.filters[key].length - false, тогда сработает callback(task). Если там тоже вернутся true, то task будет в результате. Если false то task не попадет в итоговый массив
                         !filtersStore.filters[key].length || callback(task))
             })
         },
