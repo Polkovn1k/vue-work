@@ -10,4 +10,8 @@ export default [{
     name: 'Counter Base 4',
     path: '/counter-4',
     component: () => import('./demo4/DemoCounter.vue'),
+},{
+    name: 'Counter Base 5',
+    path: '/counter-5',
+    component: () => import('./demo5/Server.vue'),
 }]
