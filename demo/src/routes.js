@@ -14,4 +14,12 @@ export default [{
     name: 'Counter Base 5',
     path: '/counter-5',
     component: () => import('./demo5/Server.vue'),
+},{
+    name: 'Counter Base 6',
+    path: '/counter-6',
+    component: () => import('./demo6/BouncingBall.vue'),
+},{
+    name: 'Counter Base 7',
+    path: '/counter-7',
+    component: () => import('./demo6/BouncingBallJavaScript.vue'),
 }]
