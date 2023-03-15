@@ -17,9 +17,9 @@ export default [{
 },{
     name: 'Counter Base 6',
     path: '/counter-6',
-    component: () => import('./demo6/BouncingBall.vue'),
+    component: () => import('./components/BouncingBall.vue'),
 },{
     name: 'Counter Base 7',
     path: '/counter-7',
-    component: () => import('./demo6/BouncingBallJavaScript.vue'),
+    component: () => import('./components/BouncingBallJavaScript.vue'),
 }]
